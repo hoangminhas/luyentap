@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyen tap mang</title>
+</head>
+<body>
+<script>
+    function randomArr() {
+        let randomNum;
+        let arr = [];
+        for (let i=0; i<10; i++){
+            randomNum = Math.floor(Math.random()*100);
+            arr.push(randomNum);
+        }
+        return arr;
+    }
+    //Bai 1: TIm phan tu lon hon TBC cac phan tu trong mang
+    // function nice(arr) {
+    //     let sum = 0;
+    //     let avg;
+    //     let newArr = [];
+    //     for (let arrElement of arr) {
+    //         sum += arrElement;
+    //     }
+    //     avg = sum / arr.length;
+    //     for (let arrElement of arr) {
+    //         if (arrElement>avg){
+    //             newArr.push(arrElement);
+    //         }
+    //     }
+    //     return newArr;
+    // }
+    // console.log(nice(randomArr()));
+
+    //Bai 2: Tim phan tu co do dai nho nhat
+    // function minStr(arr){
+    //     let min = arr[0];
+    //     for (let arrElement of arr) {
+    //         if (min.length>arrElement.length){
+    //             min = arrElement;
+    //         }
+    //     }
+    //     return "Phan tu " + min + " co do dai nho nhat = " + min.length;
+    // }
+    // console.log(minStr(['hello', 'nice', 'fvck','x']));
+
+    //Bai 3: Tim gia tri lon nhat trong mang
+    // function findMax(arr) {
+    //     console.log(arr);
+    //     let max = arr[0];
+    //     for (let arrElement of arr) {
+    //         if(max<arrElement){
+    //             max = arrElement;
+    //         }
+    //     }
+    //     return max;
+    // }
+    // console.log(findMax(randomArr()));
+
+    //Bai 4: Tim gia tri nho nhat trong mang
+    // function findMin(arr) {
+    //     console.log(arr);
+    //     let min = arr[0];
+    //     for (let arrElement of arr) {
+    //         if(min>arrElement){
+    //             min = arrElement;
+    //         }
+    //     }
+    //     return min;
+    // }
+    // console.log(findMin(randomArr()));
+
+    //Bai 5: Tinh tong cac phan tu chan trong mang
+    // function sumOfEven(arr) {
+    //     console.log(arr);
+    //     let sum = 0;
+    //     for (let arrElement of arr) {
+    //         if (arrElement%2==0){
+    //             sum += arrElement;
+    //         }
+    //     }
+    //     return sum;
+    // }
+    // console.log(sumOfEven(randomArr()));
+
+    //Bai 6: Tim phan tu x bat ky co ton tai trong mang
+    // function findX(arr, x) {
+    //     console.log(arr);
+    //     if (arr.indexOf(x) >= 0){
+    //         return "Phan tu co ton tai trong mang.";
+    //     } else {
+    //         return "Phan tu khong ton tai."
+    //     }
+    // }
+    // console.log(findX(randomArr(), 50));
+
+    //Bai 7: Tim cac phan tu trung nhau trong mang:
+    function findResemblance(arr) {
+       // let chuong1 = [];
+       // let chuong2 = [];
+       // chuong1.push(arr[0]);
+       // for (let i=1; i<arr.length; i++){
+       //     if (chuong1.indexOf(arr[i]) !== -1) {
+       //         if (chuong2.indexOf(arr[i]) == -1){
+       //             chuong2.push(arr[i]);
+       //         }
+       //     } else {
+       //         chuong1.push(arr[i]);
+       //     }
+       // }
+       //  return chuong2;
+
+        let newArr = arr.sort((a,b) => a-b);
+        let thisArr = [];
+        for (let i=0; i<arr.length; i++){
+            if (arr[i] == arr[i+1]){
+                thisArr.push(arr[i]);
+
+            }
+        }
+        return thisArr;
+
+    }
+    console.log(findResemblance([1,3,2,4,2,5,2]));
+</script>
+</body>
+</html>

@@ -6,113 +6,117 @@
 </head>
 <body>
 <script>
-  //Bai 1: Kiem tra nam nhuan
-  // let year = prompt("Nhap vao nam");
-  // if (year%4==0){
-  //     if (year%100==0){
-  //         if (year%400==0){
-  //             alert("Nam nhuan");
-  //         } else {
-  //             alert("Nam ko nhuan");
-  //         }
-  //     } else {
-  //         alert("Nam nhuan");
-  //     }
-  // } else{
-  //     alert("Nam ko nhuan");
-  // }
+    //Bai 1: Kiem tra nam nhuan
+    // let year = prompt("Nhap vao nam");
+    // if (year%4==0){
+    //     if (year%100==0){
+    //         if (year%400==0){
+    //             alert("Nam nhuan");
+    //         } else {
+    //             alert("Nam ko nhuan");
+    //         }
+    //     } else {
+    //         alert("Nam nhuan");
+    //     }
+    // } else{
+    //     alert("Nam ko nhuan");
+    // }
 
-  //Bai 2: Tra ve so lan xuat hien cua phan tu x trong mang
-  // function count(arr, x) {
-  //     let count = 0;
-  //     for (let arrKey in arr) {
-  //         if (arr[arrKey] == x){
-  //             count++;
-  //         }
-  //     }
-  //     console.log("X xuat hien " + count + " lan");
-  // }
-  // count([1,3,5,7,5,9,5,5], 5);
+    //Bai 2: Tra ve so lan xuat hien cua phan tu x trong mang
+    // function count(arr, x) {
+    //     let count = 0;
+    //     for (let arrKey in arr) {
+    //         if (arr[arrKey] == x){
+    //             count++;
+    //         }
+    //     }
+    //     console.log("X xuat hien " + count + " lan");
+    // }
+    // count([1,3,5,7,5,9,5,5], 5);
 
-  //Bai 3: Tim gia tri lon thu 2 trong mang
-  // function secondMax(arr){
-  //     let newArr = arr.sort(function (a,b){
-  //         return a-b;
-  //     });
-  //     return newArr[newArr.length-2];
-  // }
-  // document.write(secondMax([1,5,3,9,7,12,10,13,100,22,]));
+    //Bai 3: Tim gia tri lon thu 2 trong mang
+    // function secondMax(arr){
+    //     let newArr = arr.sort(function (a,b){
+    //         return a-b;
+    //     });
+    //     return newArr[newArr.length-2];
+    // }
+    // document.write(secondMax([1,5,3,9,7,12,10,13,100,22,]));
 
-  //Bai 4:Tinh hieu cac phan tu trong mang so nguyen
-  // function minusArr(arr) {
-  //     let hieu = arr[0];
-  //     for (let i=1; i<arr.length; i++) {
-  //         hieu -= arr[i];
-  //     }
-  //     return hieu;
-  // }
-  // document.write(minusArr([5,4,3,2,1]));
+    //Bai 4:Tinh hieu cac phan tu trong mang so nguyen
+    // function minusArr(arr) {
+    //     let hieu = arr[0];
+    //     for (let i=1; i<arr.length; i++) {
+    //         hieu -= arr[i];
+    //     }
+    //     return hieu;
+    // }
+    // document.write(minusArr([5,4,3,2,1]));
 
-  //Bai 5: Tinh cac so nguyen to co trong mang
-  // function multiplyPrime(arr) {
-  //     function checkPrime(num) {
-  //         let flag = true;
-  //         let n = 2;
-  //         for (n; n<= num-1; n++){
-  //             if (num%n==0){
-  //                 flag = false;
-  //             }
-  //         }
-  //         if (flag == true){
-  //             return num;
-  //         } else {
-  //             return 1;
-  //         }
-  //     }
-  //     let product = 1;
-  //     for (let arrElement of arr) {
-  //         product *= checkPrime(arrElement);
-  //     }
-  //     return product;
-  // }
-  // document.write(multiplyPrime([1,2,3,4,5,7,9]));
+    //Bai 5: Tinh cac so nguyen to co trong mang
+    // function multiplyPrime(arr) {
+    //     function checkPrime(num) {
+    //         let flag = true;
+    //         let n = 2;
+    //         for (n; n<= num-1; n++){
+    //             if (num%n==0){
+    //                 flag = false;
+    //             }
+    //         }
+    //         if (flag == true){
+    //             return num;
+    //         } else {
+    //             return 1;
+    //         }
+    //     }
+    //     let product = 1;
+    //     for (let arrElement of arr) {
+    //         product *= checkPrime(arrElement);
+    //     }
+    //     return product;
+    // }
+    // document.write(multiplyPrime([1,2,3,4,5,7,9]));
 
-  //Bai 6: Tim gia tri nho nhat trong mang so nguyen
-  // function findMin(arr) {
-  //     let min = arr[0];
-  //     for (let arrElement of arr) {
-  //         if (min > arrElement){
-  //             min = arrElement;
-  //         }
-  //     }
-  //     return min;
-  // }
-  // console.log(findMin([3,5,7,1,9]));
+    //Bai 6: Tim gia tri nho nhat trong mang so nguyen
+    // function findMin(arr) {
+    //     let min = arr[0];
+    //     for (let arrElement of arr) {
+    //         if (min > arrElement){
+    //             min = arrElement;
+    //         }
+    //     }
+    //     return min;
+    // }
+    // console.log(findMin([3,5,7,1,9]));
 
-  //Bai 7:
-  function binaryTransfer(num) {
-      return num.toString(2);
-  }
-  console.log(binaryTransfer(8));
+    //Bai 7:
+    let result = '';
 
-  //Bai 8: Tinh chu vi tam giac
-  // function circuitTriang(a,b,c) {
-  //     for (let i=0; i<a.length; i++){
-  //         let j = i+1;
-  //         let chuvi = a[i] + b[i] + c[i];
-  //         console.log("Chu vi tam giac " + j + ": " + chuvi);
-  //     }
-  // }
-  // circuitTriang([1,4,5,9,7,3,2],[2,3,5,6,5,8,1],[5,3,4,8,6,7,1]);
+    function binaryTransfer(num) {
+        let result = [];
+        let i = Math.floor(num / 2);
+    }
 
-  //Bai 9: Tinh n!
-  // function factorialNum(num) {
-  //     for (let i=num-1; i>0; i--){
-  //         num *= i;
-  //     }
-  //     alert(num);
-  // }
-  // factorialNum(5);
+    console.log(binaryTransfer(8));
+
+    //Bai 8: Tinh chu vi tam giac
+    // function circuitTriang(a,b,c) {
+    //     for (let i=0; i<a.length; i++){
+    //         let j = i+1;
+    //         let chuvi = a[i] + b[i] + c[i];
+    //         console.log("Chu vi tam giac " + j + ": " + chuvi);
+    //     }
+    // }
+    // circuitTriang([1,4,5,9,7,3,2],[2,3,5,6,5,8,1],[5,3,4,8,6,7,1]);
+
+    //Bai 9: Tinh n!
+    // function factorialNum(num) {
+    //     for (let i=num-1; i>0; i--){
+    //         num *= i;
+    //     }
+    //     alert(num);
+    // }
+    // factorialNum(5);
 </script>
 </body>
 </html>
